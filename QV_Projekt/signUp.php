@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $id = mysqli_insert_id($conn);
                 echo "Inserted record with id: $id";
                 require 'redirect.php';
-                redirectAndExit("/www/Prüfung/liste.php?id=$id");
+                redirectAndExit("/www/QV-Rechner/overview.php?id=$id");
             } else {
                 echo mysqli_stmt_error($result_of_sql);
             }
