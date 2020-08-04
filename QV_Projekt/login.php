@@ -33,9 +33,11 @@ require 'Includes/dbConnection.php';
                     <label class="form-check-label" for="password">Password:</label>
                     <input class="form-control" name="password" id="password" maxlength="20" required>
                 </div>
-                <button class="btn btn-secondary">Login</button>
+                 <button class="btn btn-secondary">Login</button>
                 <p class="text-signup">Don't have an account? Sign up now.</p>
-                <button class="btn btn-secondary">Sign Up</button>
+                <form action="signUp.php">
+                    <button class="btn btn-secondary">Sign Up</button>
+                </form>
             </div>
             <div class="col-sm-3"></div>
         </div>
