@@ -89,6 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="checkbox" name="bms" value="bms">
                 </div>
                 <br>
+                
                 <a href="login.php"><button class="btn btn-secondary">Back</button></a>
 
                 <button class="btn btn-secondary">Apply</button>
