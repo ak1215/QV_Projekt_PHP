@@ -2,7 +2,7 @@
 //Verbindung von DB
 function connectDataBase(){
     $db_host = "localhost";
-    $db_name = "p8a3d93";
+    $db_name = "QVrechner";
     $db_username = "cms_www";
     $db_password = "#cms!topSECRet";
 
@@ -10,7 +10,7 @@ function connectDataBase(){
 
 
 if(mysqli_connect_error()){
-    echo "Fehler bei der Verbindung";
+    echo "Could not connect";
     echo mysqli_connect_error();
 } else {
     return $conn;
