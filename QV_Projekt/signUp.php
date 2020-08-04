@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $id = mysqli_insert_id($conn);
                 echo "Inserted record with id: $id";
                 require 'redirect.php';
-                redirectAndExit("/www/QV-Rechner/overview.php?id=$id");
+                redirectAndExit("/www/Prüfung/liste.php?id=$id");
             } else {
                 echo mysqli_stmt_error($result_of_sql);
             }
@@ -89,6 +89,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="checkbox" name="bms" value="bms">
                 </div>
                 <br>
+                <a href="login.php"><button class="btn btn-secondary">Back</button></a>
+
                 <button class="btn btn-secondary">Apply</button>
             </div>
             <div class="col-sm-3"></div>
