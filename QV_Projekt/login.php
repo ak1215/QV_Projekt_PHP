@@ -21,7 +21,7 @@ require 'Includes/dbConnection.php';
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-                <h1 class="title">QV-Rechner</h1>
+                <h1 class="title">QV-Calculator</h1>
                 <h5 class="descr">Focus more on learning than on grades.</h5>
 
                 <div class="form-group">
