@@ -9,13 +9,16 @@
 
 <body>
     <div class="container">
-        <div class="col-sm-3"></div>
-      <div class="col-sm-6">
+        
+<div class="row">
+    <div class="col-sm-3"></div>
+<div class="col-sm-6">
             <h1 class="title">QV-Rechner</h1>
             <h5 class="descr">Focus more on learning than on grades.</h5> 
              
             <div class="form-group">
                 <label class="form-check-label" for="username">Username:</label>
+                
                 <input class="form-control" name="username" id="username" maxlength="100" required autofocus>
             </div>
             <div class="form-group">
@@ -27,6 +30,7 @@
             <button class="btn btn-secondary">Sign Up</button>
         </div>
         <div class="col-sm-3"></div>
+        </div>
 
     </div>
 </body>
