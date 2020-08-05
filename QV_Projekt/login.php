@@ -107,7 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </div>
                 <div class="form-group">
                     <label class="form-check-label" for="password">Password:</label>
-                    <input class="form-control" name="password" id="password" maxlength="20" required>
+                    <input class="form-control" //type="password"//  name="password" id="password" maxlength="20" required>
                 </div>
                 <button class="btn btn-secondary">Login</button>
                 <p class="text-signup">Don't have an account? Sign up now.</p>
