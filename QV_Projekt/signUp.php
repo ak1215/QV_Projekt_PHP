@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn = connectDataBase();
 
         //Insert into Struktur
-        $sql = "INSERT INTO fahrzeugpark(username, passwordu, firstname, lastname)
+        $sql = "INSERT INTO user(username, passwordu, firstname, lastname)
                 VALUES (?, ?, ?, ?)";
         //sql statement vorbereiten
         $result_of_sql = mysqli_prepare($conn, $sql);
@@ -30,12 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //Verbindung mit SQL
         if ($result_of_sql === false) {
             echo mysqli_error($conn);
-        } else {
+        } else { 
             mysqli_stmt_bind_param(
                 $result_of_sql,
                 "ssss",
                 $_POST['username'],
-                $_POST['password'],
+                $_POST['passwordu'],
                 $_POST['firstname'],
                 $_POST['lastname']
             );
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $id = mysqli_insert_id($conn);
                 echo "Inserted record with id: $id";
                 require 'redirect.php';
-                redirectAndExit("/www/Prüfung/liste.php?id=$id");
+                redirectAndExit("/www/QV-Rechner/overview.php?id=$id");
             } else {
                 echo mysqli_stmt_error($result_of_sql);
             }
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
@@ -89,9 +89,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="checkbox" name="bms" value="bms">
                 </div>
                 <br>
-                
                 <a href="login.php"><button class="btn btn-secondary">Back</button></a>
-
+                
                 <button class="btn btn-secondary">Apply</button>
             </div>
             <div class="col-sm-3"></div>
