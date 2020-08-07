@@ -1,5 +1,5 @@
 body {
-    background-image: url("background.jpg");
+    background-image: url("../background.jpg");
 }
 
 .btn {
@@ -31,4 +31,32 @@ body {
 
 .form-check-label {
     color: #41626a;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #41626a;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: white;
+}
+
+.save {
+    text-align: right;
 }
